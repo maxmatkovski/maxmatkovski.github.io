@@ -160,7 +160,7 @@
         .project-image {
             width: 100%;
             max-height: 400px;
-            object-fit: cover;
+            object-fit: contain;
             border-radius: 0.5rem;
             margin: 1.5rem 0;
         }
@@ -180,6 +180,25 @@
             font-size: 0.875rem;
         }
 
+        .project-features {
+            list-style: none;
+            margin: 1rem 0;
+            padding-left: 1rem;
+        }
+
+        .project-features li {
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .project-features li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+        }
+
         .btn {
             display: inline-block;
             padding: 0.75rem 1.5rem;
@@ -189,6 +208,7 @@
             border-radius: 0.5rem;
             font-weight: 500;
             transition: background-color 0.2s;
+            margin-top: 1rem;
         }
 
         .btn:hover {
@@ -274,6 +294,7 @@
 
         <section class="section" id="projects">
             <h2 class="section-title">Featured Projects</h2>
+            
             <div class="card">
                 <h3>Sentiment Analysis on Climate Change Tweets</h3>
                 <img src="./Images/NLP-Word-Cloud.png" alt="NLP Word Cloud" class="project-image">
@@ -285,6 +306,44 @@
                 </div>
                 <p>A comprehensive sentiment analysis project analyzing 100,000 tweets about climate change using BERT. This project demonstrates advanced NLP techniques and deep learning applications in social media analysis.</p>
                 <a href="https://github.com/maxmatkovski/NLP" class="btn" target="_blank">View on GitHub →</a>
+            </div>
+
+            <div class="card">
+                <h3>Monte Carlo Stock Market Simulation</h3>
+                <div class="tech-stack">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Financial Analysis</span>
+                    <span class="tech-tag">Monte Carlo</span>
+                    <span class="tech-tag">Statistical Modeling</span>
+                    <span class="tech-tag">Data Visualization</span>
+                </div>
+                <p>A sophisticated Monte Carlo simulation tool for analyzing stock market scenarios and portfolio performance. This project implements advanced statistical methods to model potential market outcomes and risk assessment.</p>
+                <ul class="project-features">
+                    <li>Stock price prediction using geometric Brownian motion</li>
+                    <li>Multiple scenario analysis with varying market conditions</li>
+                    <li>Risk assessment and probability distribution analysis</li>
+                    <li>Interactive visualizations of simulation results</li>
+                </ul>
+                <a href="https://github.com/maxmatkovski/Monte-Carlo-Simulation" class="btn" target="_blank">View on GitHub →</a>
+            </div>
+
+            <div class="card">
+                <h3>Water Potability Prediction</h3>
+                <div class="tech-stack">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Machine Learning</span>
+                    <span class="tech-tag">Data Analysis</span>
+                    <span class="tech-tag">Scikit-learn</span>
+                    <span class="tech-tag">Statistical Analysis</span>
+                </div>
+                <p>A machine learning project focused on predicting water potability using various water quality metrics. The project implements multiple classification models to determine if water is safe for consumption based on chemical and physical properties.</p>
+                <ul class="project-features">
+                    <li>Data preprocessing and feature engineering</li>
+                    <li>Implementation of multiple ML models for comparison</li>
+                    <li>Detailed analysis of water quality parameters</li>
+                    <li>Performance evaluation and model selection</li>
+                </ul>
+                <a href="https://github.com/maxmatkovski/Predicting-Water-Potability" class="btn" target="_blank">View on GitHub →</a>
             </div>
         </section>
 
