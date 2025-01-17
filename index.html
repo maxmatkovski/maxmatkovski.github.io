@@ -3,21 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Pages Site</title>
+    <title>Max Matkovski - Data Science Portfolio</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 2rem;
             color: #333;
+            background-color: #f8f9fa;
         }
         
         header {
             text-align: center;
-            padding: 2rem 0;
-            border-bottom: 2px solid #eee;
+            padding: 3rem 0;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
         }
         
         nav {
@@ -28,62 +32,124 @@
             margin: 0 1rem;
             color: #0366d6;
             text-decoration: none;
+            font-weight: 500;
         }
         
         nav a:hover {
             text-decoration: underline;
         }
         
-        section {
+        .project-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 2rem;
             margin: 2rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .project-image {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin: 1rem 0;
+        }
+        
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+        
+        .tech-tag {
+            background-color: #e1e4e8;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            color: #24292e;
         }
         
         footer {
             text-align: center;
             padding: 2rem 0;
+            margin-top: 3rem;
             border-top: 2px solid #eee;
             color: #666;
+        }
+        
+        .github-link {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            background-color: #24292e;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 1rem;
+        }
+        
+        .github-link:hover {
+            background-color: #1a1f24;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to My Site</h1>
+        <h1>Max Matkovski</h1>
+        <h2>Data Science Portfolio</h2>
         <nav>
-            <a href="#about">About</a>
             <a href="#projects">Projects</a>
+            <a href="#about">About</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
 
     <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Hello! I'm a [your profession/title]. This is my personal website where I share my work and thoughts.</p>
+        <section id="projects">
+            <div class="project-card">
+                <h2>Sentiment Analysis on Climate Change Tweets</h2>
+                <img src="Images/NLP-Word-Cloud.png" alt="NLP Word Cloud" class="project-image">
+                <div class="tech-stack">
+                    <span class="tech-tag">BERT</span>
+                    <span class="tech-tag">NLP</span>
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Machine Learning</span>
+                </div>
+                <p>A comprehensive sentiment analysis project analyzing 100,000 tweets about climate change using BERT (Bidirectional Encoder Representations from Transformers). This project demonstrates advanced NLP techniques and deep learning applications in social media analysis.</p>
+                <a href="https://github.com/maxmatkovski/NLP" class="github-link">View on GitHub →</a>
+            </div>
+            
+            <!-- Add more project cards here as needed -->
         </section>
 
-        <section id="projects">
-            <h2>Projects</h2>
-            <p>Here are some of my recent projects:</p>
-            <ul>
-                <li>Project 1 - Brief description</li>
-                <li>Project 2 - Brief description</li>
-                <li>Project 3 - Brief description</li>
-            </ul>
+        <section id="about">
+            <div class="project-card">
+                <h2>About Me</h2>
+                <p>I'm a Data Scientist passionate about applying machine learning and artificial intelligence to solve real-world problems. My expertise includes Natural Language Processing, Machine Learning, and Data Analysis.</p>
+                <!-- Add more about yourself -->
+            </div>
         </section>
 
         <section id="contact">
-            <h2>Contact</h2>
-            <p>You can reach me at:</p>
-            <ul>
-                <li>Email: your.email@example.com</li>
-                <li>GitHub: <a href="https://github.com/yourusername">@yourusername</a></li>
-            </ul>
+            <div class="project-card">
+                <h2>Contact</h2>
+                <p>I'm always interested in new opportunities and collaborations.</p>
+                <ul>
+                    <li>GitHub: <a href="https://github.com/maxmatkovski">@maxmatkovski</a></li>
+                    <!-- Add your LinkedIn, email, or other professional contacts -->
+                </ul>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>© 2025 Your Name. Built with GitHub Pages.</p>
+        <p>© 2025 Max Matkovski. All rights reserved.</p>
     </footer>
 </body>
 </html>
