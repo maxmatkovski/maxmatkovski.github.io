@@ -3,213 +3,248 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Max Matkovski - Professional Experience</title>
+    <title>Max Matkovski - Data Science & ML Portfolio</title>
     <style>
-        /* [Previous styles remain the same] */
-        .back-button {
-            display: inline-block;
-            padding: 0.5rem 1rem;
-            background-color: #f1f1f1;
-            color: #333;
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1e40af;
+            --secondary: #64748b;
+            --accent: #3b82f6;
+            --background: #f8fafc;
+            --card-bg: #ffffff;
+            --text: #0f172a;
+            --text-light: #475569;
+            --border: #e2e8f0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        nav {
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text);
             text-decoration: none;
-            border-radius: 4px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .hero {
+            padding: 6rem 0;
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--text);
+        }
+
+        .hero h2 {
+            font-size: 1.5rem;
+            color: var(--text-light);
+            font-weight: 400;
             margin-bottom: 2rem;
         }
-        
-        .back-button:hover {
-            background-color: #e1e1e1;
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
         }
-        
-        .timeline-container {
-            position: relative;
-            padding-left: 2rem;
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.75rem 1.5rem;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            transition: background-color 0.2s;
         }
-        
-        .timeline-container::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background-color: #e1e4e8;
+
+        .social-link:hover {
+            background-color: var(--primary-dark);
         }
-        
-        .experience-item {
-            position: relative;
-            margin-bottom: 3rem;
+
+        .section {
+            padding: 4rem 0;
         }
-        
-        .experience-item::before {
-            content: '';
-            position: absolute;
-            left: -2.4rem;
-            top: 0.5rem;
-            width: 1rem;
-            height: 1rem;
-            border-radius: 50%;
-            background-color: #0366d6;
-            border: 2px solid white;
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 0.75rem;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border: 1px solid var(--border);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: var(--text);
+        }
+
+        .project-image {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 0.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+
+        .tech-tag {
+            background-color: var(--accent);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            font-size: 0.875rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            transition: background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-dark);
+        }
+
+        footer {
+            background-color: var(--card-bg);
+            border-top: 1px solid var(--border);
+            padding: 2rem 0;
+            margin-top: 4rem;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Max Matkovski</h1>
-        <h2>Professional Experience</h2>
-        <nav>
-            <a href="index.html" class="back-button">← Back to Portfolio</a>
-        </nav>
-    </header>
+    <nav>
+        <div class="container nav-content">
+            <h2>Max Matkovski</h2>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="experience.html">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
 
-    <main>
-        <section id="education" class="project-card">
-            <h2 class="section-title">Education</h2>
-            <div class="timeline-container">
-                <div class="education-item">
-                    <h3>Georgia Institute of Technology</h3>
-                    <p>Master of Science (M.S.), Computer Science (Machine Learning)</p>
-                    <p class="experience-date">2023 - 2025</p>
-                </div>
-                <div class="education-item">
-                    <h3>University of California, Los Angeles</h3>
-                    <p>Bachelor of Science (B.S.), Computer Science, Cognitive Science</p>
-                    <p class="experience-date">2019 - 2023</p>
-                </div>
+    <div class="hero">
+        <div class="container">
+            <h1>Max Matkovski</h1>
+            <h2>Machine Learning Engineer & Data Scientist</h2>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/maxmatkovski/" class="social-link" target="_blank">LinkedIn</a>
+                <a href="https://github.com/maxmatkovski" class="social-link" target="_blank">GitHub</a>
+                <a href="mailto:maxmatkovski@gmail.com" class="social-link">Email</a>
+            </div>
+        </div>
+    </div>
+
+    <main class="container">
+        <section class="section" id="about">
+            <h2 class="section-title">About Me</h2>
+            <div class="card">
+                <p>Currently pursuing my M.S. in Computer Science with a focus on Machine Learning at Georgia Institute of Technology, I combine strong technical expertise with practical industry experience from both Y Combinator startups and established tech companies.</p>
+                <br>
+                <p>My expertise spans machine learning, data engineering, and full-stack development, with a particular focus on NLP and predictive analytics. I bring a unique global perspective with proficiency in multiple languages and a background in both academic research and industry applications.</p>
             </div>
         </section>
 
-        <section id="experience" class="project-card">
-            <h2 class="section-title">Professional Experience</h2>
-            <div class="timeline-container">
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <div>
-                            <h3 class="experience-title">Machine Learning Engineer Intern</h3>
-                            <div class="experience-company">Ontra Mobility (Y Combinator S24 Batch)</div>
-                        </div>
-                        <div class="experience-date">July 2024 – December 2024</div>
-                        <div class="experience-location">San Francisco Bay Area, CA — Remote</div>
-                    </div>
-                    <ul class="bullet-list">
-                        <li>First Machine Learning member of Ontra Mobility, AI for multi-modal transportation, part of Y Combinator S24 Batch</li>
-                        <li>Orchestrated data pipeline and deserialization of Protobuf location files into structured JSON format with Python</li>
-                        <li>Performed extensive data cleaning on real time vehicle position data to enable Machine Learning Algorithm development</li>
-                        <li>Contributed to custom ML algorithm to predict vehicle arrival times and classify trip ids based on a variety of features</li>
-                    </ul>
+        <section class="section" id="projects">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="card">
+                <h3>Sentiment Analysis on Climate Change Tweets</h3>
+                <img src="./Images/NLP-Word-Cloud.png" alt="NLP Word Cloud" class="project-image">
+                <div class="tech-stack">
+                    <span class="tech-tag">BERT</span>
+                    <span class="tech-tag">NLP</span>
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Machine Learning</span>
                 </div>
-
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <div>
-                            <h3 class="experience-title">Machine Learning Integration Engineer</h3>
-                            <div class="experience-company">Zultys</div>
-                        </div>
-                        <div class="experience-date">June 2023 – December 2023</div>
-                        <div class="experience-location">San Francisco Bay Area, CA — Remote (Contract)</div>
-                    </div>
-                    <ul class="bullet-list">
-                        <li>Integrated OpenAI's Whisper model to create an ASR system, improving transcription accuracy by 31%</li>
-                        <li>Incorporated transcription model into a custom full-stack web application using HTTP, NGINX, HTML, CSS, and JavaScript</li>
-                        <li>Engineered several instances of Whisper transcription model on AWS EC2 Linux Ubuntu</li>
-                        <li>Strategically selected system features optimizing for latency, transcription accuracy and financial cost</li>
-                    </ul>
-                </div>
-
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <div>
-                            <h3 class="experience-title">Data Science Intern</h3>
-                            <div class="experience-company">Finphil</div>
-                        </div>
-                        <div class="experience-date">June 2021 – September 2021</div>
-                        <div class="experience-location">Los Angeles, CA — Onsite</div>
-                    </div>
-                    <ul class="bullet-list">
-                        <li>Managed SQLite database of user behavior, improving average User Satisfaction Score by 15% through A/B Testing</li>
-                        <li>Performed data engineering ingestion using PySpark and contributed to ETL process using AWS S3 and AWS Kinesis</li>
-                        <li>Created recommendation systems using Content Filtering and Collaborative Filtering across 90 investment sectors</li>
-                        <li>Generated over 60 concrete data visualizations and tracked KPIs using PowerBI</li>
-                    </ul>
-                </div>
-
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <div>
-                            <h3 class="experience-title">Data Engineer / Software Engineer Intern</h3>
-                            <div class="experience-company">LeNgineer</div>
-                        </div>
-                        <div class="experience-date">March 2019 – June 2021</div>
-                        <div class="experience-location">Los Angeles, CA — Remote</div>
-                    </div>
-                    <ul class="bullet-list">
-                        <li>Developed a full-stack web based search engine for used cars using HTML, CSS, JavaScript, SQL, and React.js</li>
-                        <li>Built a web scraper and data pipeline with Selenium, AWS S3, Lambda, CloudWatch, Terraform</li>
-                        <li>Structured data was sent with API to Python for analysis and machine learning, using PySpark and Spark.ml</li>
-                        <li>Pitched tailored software solution for the US market of 16,000 second-hand car dealerships to investors</li>
-                    </ul>
-                </div>
-
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <div>
-                            <h3 class="experience-title">Alzheimer's Research Data Analyst Intern</h3>
-                            <div class="experience-company">Sanford Burnham Prebys Medical Discovery Institute - Randal J. Kaufman Lab</div>
-                        </div>
-                        <div class="experience-date">June 2018 – March 2019</div>
-                        <div class="experience-location">La Jolla, CA — On-site</div>
-                    </div>
-                    <ul class="bullet-list">
-                        <li>Utilized ML techniques (Sklearn) to detect Alzheimer's disease, achieving an 83% detection accuracy rate</li>
-                        <li>Hypothesis tested data to investigate possible correlation of Protein ATF6a with Alzheimer's Disease</li>
-                        <li>Cleaned data to ensure uniformity and consistency across various samples, maintained data quality and recency</li>
-                    </ul>
-                </div>
+                <p>A comprehensive sentiment analysis project analyzing 100,000 tweets about climate change using BERT. This project demonstrates advanced NLP techniques and deep learning applications in social media analysis.</p>
+                <a href="https://github.com/maxmatkovski/NLP" class="btn" target="_blank">View on GitHub →</a>
             </div>
         </section>
 
-        <section id="skills" class="project-card">
-            <h2 class="section-title">Technical Skills</h2>
-            <div class="skill-section">
-                <h3>General</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Full Stack Development</span>
-                    <span class="skill-tag">Object-Oriented Programming</span>
-                    <span class="skill-tag">Cloud Computing</span>
-                    <span class="skill-tag">Machine Learning</span>
-                    <span class="skill-tag">Statistical Modeling</span>
-                    <span class="skill-tag">Data Engineering</span>
-                    <span class="skill-tag">ETL</span>
-                    <span class="skill-tag">A/B Testing</span>
-                    <span class="skill-tag">Business Intelligence</span>
-                    <span class="skill-tag">Data Visualization</span>
-                    <span class="skill-tag">Sentiment Analysis</span>
-                    <span class="skill-tag">ASR Development</span>
-                </div>
-
-                <h3>Technologies</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Python 3</span>
-                    <span class="skill-tag">C++</span>
-                    <span class="skill-tag">R</span>
-                    <span class="skill-tag">SQL</span>
-                    <span class="skill-tag">MySQL</span>
-                    <span class="skill-tag">HTML/CSS</span>
-                    <span class="skill-tag">React Native</span>
-                    <span class="skill-tag">JavaScript</span>
-                    <span class="skill-tag">SkLearn</span>
-                    <span class="skill-tag">PyTorch</span>
-                    <span class="skill-tag">TensorFlow</span>
-                    <span class="skill-tag">PySpark</span>
-                    <span class="skill-tag">AWS</span>
-                    <span class="skill-tag">GCP</span>
+        <section class="section" id="contact">
+            <h2 class="section-title">Contact</h2>
+            <div class="card">
+                <p>I'm always interested in new opportunities and collaborations. Feel free to reach out!</p>
+                <div class="social-links" style="margin-top: 1rem;">
+                    <a href="mailto:maxmatkovski@gmail.com" class="social-link">Email</a>
+                    <a href="https://www.linkedin.com/in/maxmatkovski/" class="social-link" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/maxmatkovski" class="social-link" target="_blank">GitHub</a>
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>© 2025 Max Matkovski. All rights reserved.</p>
+        <div class="container">
+            <p>© 2025 Max Matkovski. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 </html>
