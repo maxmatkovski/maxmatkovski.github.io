@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Max Matkovski - Data Science Portfolio</title>
+    <title>Max Matkovski - Data Science & Machine Learning Portfolio</title>
     <style>
+        /* Previous styles remain */
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
@@ -24,50 +25,15 @@
             margin-bottom: 2rem;
         }
         
-        nav {
-            margin: 1rem 0;
-        }
-        
-        nav a {
-            margin: 0 1rem;
-            color: #0366d6;
-            text-decoration: none;
-            font-weight: 500;
-        }
-        
-        nav a:hover {
-            text-decoration: underline;
-        }
-        
-        .project-card {
-            background-color: white;
-            border-radius: 8px;
-            padding: 2rem;
-            margin: 2rem 0;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            transition: transform 0.2s;
-        }
-        
-        .project-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .project-image {
-            width: 100%;
-            max-height: 400px;
-            object-fit: cover;
-            border-radius: 4px;
-            margin: 1rem 0;
-        }
-        
-        .tech-stack {
+        /* New styles for resume sections */
+        .skill-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 0.5rem;
             margin: 1rem 0;
         }
         
-        .tech-tag {
+        .skill-tag {
             background-color: #e1e4e8;
             padding: 0.25rem 0.75rem;
             border-radius: 15px;
@@ -75,42 +41,176 @@
             color: #24292e;
         }
         
-        footer {
-            text-align: center;
-            padding: 2rem 0;
-            margin-top: 3rem;
-            border-top: 2px solid #eee;
+        .experience-item {
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .experience-item:last-child {
+            border-bottom: none;
+        }
+        
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+        
+        .experience-title {
+            font-weight: 600;
+            color: #24292e;
+            margin-bottom: 0.5rem;
+        }
+        
+        .experience-company {
+            color: #0366d6;
+        }
+        
+        .experience-date {
             color: #666;
+            font-size: 0.9rem;
         }
         
-        .github-link {
-            display: inline-flex;
-            align-items: center;
-            padding: 0.5rem 1rem;
-            background-color: #24292e;
-            color: white;
-            text-decoration: none;
-            border-radius: 4px;
-            margin-top: 1rem;
+        .experience-location {
+            color: #666;
+            font-size: 0.9rem;
         }
         
-        .github-link:hover {
-            background-color: #1a1f24;
+        .education-item {
+            margin-bottom: 1.5rem;
         }
+        
+        .bullet-list {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+            margin: 0.5rem 0;
+        }
+        
+        .section-title {
+            color: #24292e;
+            border-bottom: 2px solid #0366d6;
+            padding-bottom: 0.5rem;
+            margin: 2rem 0 1rem;
+        }
+        
+        /* Previous styles for cards, links, etc. remain the same */
     </style>
 </head>
 <body>
     <header>
         <h1>Max Matkovski</h1>
-        <h2>Data Science Portfolio</h2>
+        <h2>Machine Learning Engineer & Data Scientist</h2>
         <nav>
+            <a href="#experience">Experience</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
-            <a href="#about">About</a>
             <a href="#contact">Contact</a>
         </nav>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/maxmatkovski/" class="social-link" target="_blank">LinkedIn</a>
+            <a href="https://github.com/maxmatkovski" class="social-link" target="_blank">GitHub</a>
+        </div>
     </header>
 
     <main>
+        <section id="about">
+            <div class="project-card">
+                <h2 class="section-title">About Me</h2>
+                <p>I'm a Machine Learning Engineer and Data Scientist with expertise in full-stack development, cloud computing, and artificial intelligence. Currently pursuing my M.S. in Computer Science with a focus on Machine Learning at Georgia Institute of Technology, I bring experience from roles at Y Combinator startups and established tech companies.</p>
+                <p>Language Proficiency: Native English, Proficient in Russian, Spanish, Portuguese, and Semi-Proficient in Hebrew, Italian, and Farsi Persian.</p>
+            </div>
+        </section>
+
+        <section id="experience">
+            <div class="project-card">
+                <h2 class="section-title">Professional Experience</h2>
+                
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <h3 class="experience-title">Machine Learning Engineer Intern</h3>
+                            <div class="experience-company">Ontra Mobility (Y Combinator S24 Batch)</div>
+                        </div>
+                        <div>
+                            <div class="experience-date">July 2024 – December 2024</div>
+                            <div class="experience-location">San Francisco Bay Area, CA — Remote</div>
+                        </div>
+                    </div>
+                    <ul class="bullet-list">
+                        <li>First Machine Learning member of Y Combinator S24 Batch startup focusing on AI for multi-modal transportation</li>
+                        <li>Orchestrated data pipeline and deserialization of Protobuf location files into structured JSON format</li>
+                        <li>Developed custom ML algorithms for vehicle arrival time prediction</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <h3 class="experience-title">Machine Learning Integration Engineer</h3>
+                            <div class="experience-company">Zultys</div>
+                        </div>
+                        <div>
+                            <div class="experience-date">June 2023 – December 2023</div>
+                            <div class="experience-location">San Francisco Bay Area, CA — Remote</div>
+                        </div>
+                    </div>
+                    <ul class="bullet-list">
+                        <li>Integrated OpenAI's Whisper model, improving transcription accuracy by 31%</li>
+                        <li>Built full-stack web application for voice transcription</li>
+                        <li>Engineered AWS EC2 infrastructure for model deployment</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="education">
+            <div class="project-card">
+                <h2 class="section-title">Education</h2>
+                <div class="education-item">
+                    <h3>Georgia Institute of Technology</h3>
+                    <p>Master of Science (M.S.), Computer Science (Machine Learning)</p>
+                    <p class="experience-date">2023 - 2025</p>
+                </div>
+                <div class="education-item">
+                    <h3>University of California, Los Angeles</h3>
+                    <p>Bachelor of Science (B.S.), Computer Science, Cognitive Science</p>
+                    <p class="experience-date">2019 - 2023</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <div class="project-card">
+                <h2 class="section-title">Technical Skills</h2>
+                <h3>Technologies</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Python 3</span>
+                    <span class="skill-tag">C++</span>
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">PyTorch</span>
+                    <span class="skill-tag">TensorFlow</span>
+                    <span class="skill-tag">AWS</span>
+                    <span class="skill-tag">GCP</span>
+                    <span class="skill-tag">React Native</span>
+                    <span class="skill-tag">JavaScript</span>
+                </div>
+                
+                <h3>Areas of Expertise</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Machine Learning</span>
+                    <span class="skill-tag">Full Stack Development</span>
+                    <span class="skill-tag">Cloud Computing</span>
+                    <span class="skill-tag">Data Engineering</span>
+                    <span class="skill-tag">ETL</span>
+                    <span class="skill-tag">A/B Testing</span>
+                    <span class="skill-tag">Statistical Modeling</span>
+                </div>
+            </div>
+        </section>
+
         <section id="projects">
             <div class="project-card">
                 <h2>Sentiment Analysis on Climate Change Tweets</h2>
@@ -124,25 +224,25 @@
                 <p>A comprehensive sentiment analysis project analyzing 100,000 tweets about climate change using BERT (Bidirectional Encoder Representations from Transformers). This project demonstrates advanced NLP techniques and deep learning applications in social media analysis.</p>
                 <a href="https://github.com/maxmatkovski/NLP" class="github-link">View on GitHub →</a>
             </div>
-            
-            <!-- Add more project cards here as needed -->
-        </section>
-
-        <section id="about">
-            <div class="project-card">
-                <h2>About Me</h2>
-                <p>I'm a Data Scientist passionate about applying machine learning and artificial intelligence to solve real-world problems. My expertise includes Natural Language Processing, Machine Learning, and Data Analysis.</p>
-                <!-- Add more about yourself -->
-            </div>
         </section>
 
         <section id="contact">
             <div class="project-card">
-                <h2>Contact</h2>
-                <p>I'm always interested in new opportunities and collaborations.</p>
-                <ul>
-                    <li>GitHub: <a href="https://github.com/maxmatkovski">@maxmatkovski</a></li>
-                    <!-- Add your LinkedIn, email, or other professional contacts -->
+                <h2 class="section-title">Contact</h2>
+                <p>I'm always interested in new opportunities and collaborations. Feel free to reach out!</p>
+                <ul class="contact-list">
+                    <li>
+                        <strong>Email:</strong> 
+                        <a href="mailto:maxmatkovski@gmail.com">maxmatkovski@gmail.com</a>
+                    </li>
+                    <li>
+                        <strong>LinkedIn:</strong> 
+                        <a href="https://www.linkedin.com/in/maxmatkovski/" target="_blank">linkedin.com/in/maxmatkovski</a>
+                    </li>
+                    <li>
+                        <strong>GitHub:</strong> 
+                        <a href="https://github.com/maxmatkovski" target="_blank">github.com/maxmatkovski</a>
+                    </li>
                 </ul>
             </div>
         </section>
